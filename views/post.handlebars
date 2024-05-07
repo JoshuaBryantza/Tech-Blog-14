@@ -4,6 +4,7 @@
   <p>{{content}}</p>
   <p>Created by {{user.title}} on {{ date_created}}</p>
 
+  {{#if logged_in}}
     <form class="form post-comment-form" data-post-id="{{id}}">
       <div class="form-group">
         <label for="post-comment">Comment</label>
@@ -14,7 +15,7 @@
         <button type="submit" class="btn btn-primary">Submit</button>
       </div>
     </form> 
-
+  {{/if}}
     {{#if comments.length}}
       <div class="col-md-12 comment-list">
         
@@ -23,7 +24,7 @@
           <div class="row mb-4 project">
             <div class="col-md-12">
               <p class="comment-user">
-                {{comment.user_id}}
+                {{comment.user.name}} - {{format_datetime comment.date_created}}                
               </p>
             </div>
             <div class="col-md-12">

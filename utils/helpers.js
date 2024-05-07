@@ -3,6 +3,10 @@ module.exports = {
     // Format date as MM/DD/YYYY
     return date.toLocaleDateString();
   },
+  format_datetime: (date) => {
+    const options = { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+    return date.toLocaleDateString(undefined, options);
+  },
   format_amount: (amount) => {
     // format large numbers with commas
     return parseInt(amount).toLocaleString();
