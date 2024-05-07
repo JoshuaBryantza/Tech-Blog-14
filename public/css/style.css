@@ -1,5 +1,5 @@
 header, .project:not(:last-child) {
-  border-bottom: 1px solid #cf6969;
+  border-bottom: 1px solid #ccc;
 }
 
 .no-button {
@@ -7,18 +7,27 @@ header, .project:not(:last-child) {
   border: none;
   padding: 0;
   cursor: pointer;
-  color: #bc631b;
+  color: #1b89bc;
   text-decoration: none;
   font-size: 100%;
 }
 
 .no-button:hover {
-  color: #616161;
+  color: #065b83;
   text-decoration: underline;
 }
 
 .dollar-amount {
-  color: #336533;
+  color: #056605;
   font-weight: bold;
   margin-left: -5px;
+}
+
+.comment-list{
+  border-top: 1px solid #ccc;
+}
+
+.comment-user{
+  text-align: left;
+  font-size: small;
 }

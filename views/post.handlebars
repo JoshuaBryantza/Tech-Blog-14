@@ -4,12 +4,7 @@
   <p>{{content}}</p>
   <p>Created by {{user.title}} on {{ date_created}}</p>
 
-    <form class="form post-comment-form">
-      {{!-- <div class="form-group">
-        <label for="project-name">Title:</label>
-        <input class="form-input" type="text" id="project-name" name="project-name" />
-      </div> --}}
-      
+    <form class="form post-comment-form" data-post-id="{{id}}">
       <div class="form-group">
         <label for="post-comment">Comment</label>
         <textarea class="form-input" id="post-comment" name="post-comment"></textarea>
@@ -18,8 +13,29 @@
       <div class="form-group">
         <button type="submit" class="btn btn-primary">Submit</button>
       </div>
-
     </form> 
+
+    {{#if comments.length}}
+      <div class="col-md-12 comment-list">
+        
+        {{#each comments as |comment|}}
+        
+          <div class="row mb-4 project">
+            <div class="col-md-12">
+              <p class="comment-user">
+                {{comment.user_id}}
+              </p>
+            </div>
+            <div class="col-md-12">
+              <p>
+                {{comment.content}}
+              </p>
+            </div>
+          </div>
+        {{/each}}
+      </div>
+    {{/if}}
+
 </div>
 
-<script src="./js/post.js"></script>
+<script src="/js/post.js"></script>
