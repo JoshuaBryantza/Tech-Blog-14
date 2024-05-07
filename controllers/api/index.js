@@ -1,9 +1,9 @@
-const express = require('express');
+const router = require('express').Router();
 const userRoutes = require('./userRoutes');
 const postRoutes = require('./postRoutes');
-const commentRoutes = require('./commentRoutes');
+const commentRoutes = require('./commentsRoutes');
 
-const router = express.Router();
+// const router = express.Router();
 
 // Include user routes
 // router.use('/api', userRoutes);

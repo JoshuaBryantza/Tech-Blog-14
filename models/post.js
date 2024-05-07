@@ -1,6 +1,6 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
-const User = require('./user');
+// const User = require('./user');
 
 
 class Post extends Model { }
@@ -13,7 +13,10 @@ Post.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    description: {
+    title: {
+      type: DataTypes.STRING,
+    },
+    content: {
       type: DataTypes.STRING,
     },
     date_created: {
@@ -38,8 +41,8 @@ Post.init(
 );
 
 
-Post.belongsTo(User);
-
+// Post.belongsTo(User);
+ 
 module.exports = Post;
 
 

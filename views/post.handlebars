@@ -1,0 +1,25 @@
+<div class="text-center">
+  <h2>{{title}}</h2>
+  {{!-- <p>{{{get_emoji}}}</p> --}}
+  <p>{{content}}</p>
+  <p>Created by {{user.title}} on {{ date_created}}</p>
+
+    <form class="form post-comment-form">
+      {{!-- <div class="form-group">
+        <label for="project-name">Title:</label>
+        <input class="form-input" type="text" id="project-name" name="project-name" />
+      </div> --}}
+      
+      <div class="form-group">
+        <label for="post-comment">Comment</label>
+        <textarea class="form-input" id="post-comment" name="post-comment"></textarea>
+      </div>
+
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+
+    </form> 
+</div>
+
+<script src="./js/post.js"></script>
